@@ -1,0 +1,1326 @@
+{
+  "suite": "agent-tool-contract-local-v1",
+  "timestamp_utc": "2026-10-24T07:21:52.579633+00:00",
+  "scope": "Local deterministic tool contracts with generated fixtures; no LLM or external API calls",
+  "tool_contract_pass_rate": 1.0,
+  "cases": 30,
+  "passed": 30,
+  "p50_latency_ms": 3.5380000000000003,
+  "p95_latency_ms": 7.753,
+  "agent_task_completion_rate": null,
+  "llm_accuracy": null,
+  "llm_latency_ms": null,
+  "llm_cost_usd": null,
+  "records": [
+    {
+      "id": "E01",
+      "passed": true,
+      "latency_ms": 20.744,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 8
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 8,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 8,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.1"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.2"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.3"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.4"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.5"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "100"
+          },
+          {
+            "日期": "2026-10-26",
+            "分类": "非抗生素",
+            "销售额": "999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E02",
+      "passed": true,
+      "latency_ms": 3.968,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 7
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [],
+          "date_column": "日期",
+          "start_date": "2026-10-19",
+          "end_date": "2026-10-25"
+        },
+        "total_rows": 8,
+        "matched_rows": 7,
+        "date_coverage": {
+          "min": "2026-10-19",
+          "max": "2026-10-26",
+          "missing": 0
+        },
+        "warnings": [],
+        "total_result_rows": 7,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.1"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.2"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.3"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.4"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.5"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E03",
+      "passed": true,
+      "latency_ms": 3.061,
+      "expected": {
+        "status": "no_data",
+        "matched_rows": 0,
+        "date_coverage": {
+          "min": "2026-10-19",
+          "max": "2026-10-26"
+        }
+      },
+      "actual": {
+        "status": "no_data",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [],
+          "date_column": "日期",
+          "start_date": "2027-01-01",
+          "end_date": "2027-01-07"
+        },
+        "total_rows": 8,
+        "matched_rows": 0,
+        "date_coverage": {
+          "min": "2026-10-19",
+          "max": "2026-10-26",
+          "missing": 0
+        },
+        "warnings": [],
+        "total_result_rows": 0,
+        "offset": 0,
+        "next_offset": null,
+        "results": []
+      }
+    },
+    {
+      "id": "E04",
+      "passed": true,
+      "latency_ms": 3.294,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 7,
+        "results": [
+          {
+            "总额": "102.1"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [
+            {
+              "column": "销售额",
+              "op": "sum",
+              "alias": "总额"
+            }
+          ],
+          "date_column": "日期",
+          "start_date": "2026-10-19",
+          "end_date": "2026-10-25"
+        },
+        "total_rows": 8,
+        "matched_rows": 7,
+        "date_coverage": {
+          "min": "2026-10-19",
+          "max": "2026-10-26",
+          "missing": 0
+        },
+        "warnings": [],
+        "total_result_rows": 1,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "总额": "102.1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E05",
+      "passed": true,
+      "latency_ms": 3.564,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 4
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [
+            {
+              "column": "分类",
+              "op": "eq",
+              "value": "非抗生素"
+            }
+          ],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 4,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 4,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.2"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.4"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          },
+          {
+            "日期": "2026-10-26",
+            "分类": "非抗生素",
+            "销售额": "999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E06",
+      "passed": true,
+      "latency_ms": 3.764,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 4
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [
+            {
+              "column": "分类",
+              "op": "eq",
+              "value": "抗生素"
+            }
+          ],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 4,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 4,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.1"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.3"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.5"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E07",
+      "passed": true,
+      "latency_ms": 4.064,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 4
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [
+            {
+              "column": "分类",
+              "op": "ne",
+              "value": "抗生素"
+            }
+          ],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 4,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 4,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.2"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.4"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          },
+          {
+            "日期": "2026-10-26",
+            "分类": "非抗生素",
+            "销售额": "999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E08",
+      "passed": true,
+      "latency_ms": 3.645,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 4
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [
+            {
+              "column": "分类",
+              "op": "in",
+              "value": [
+                "非抗生素"
+              ]
+            }
+          ],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 4,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 4,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.2"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.4"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          },
+          {
+            "日期": "2026-10-26",
+            "分类": "非抗生素",
+            "销售额": "999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E09",
+      "passed": true,
+      "latency_ms": 3.304,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 4
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [
+            {
+              "column": "分类",
+              "op": "not_in",
+              "value": [
+                "抗生素"
+              ]
+            }
+          ],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 4,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 4,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.2"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.4"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          },
+          {
+            "日期": "2026-10-26",
+            "分类": "非抗生素",
+            "销售额": "999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E10",
+      "passed": true,
+      "latency_ms": 3.718,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 4
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [
+            {
+              "column": "分类",
+              "op": "contains",
+              "value": "非"
+            }
+          ],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 4,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 4,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.2"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.4"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          },
+          {
+            "日期": "2026-10-26",
+            "分类": "非抗生素",
+            "销售额": "999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E11",
+      "passed": true,
+      "latency_ms": 4.703,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 4
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [
+            {
+              "column": "分类",
+              "op": "not_contains",
+              "value": "非"
+            }
+          ],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 4,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 4,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.1"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.3"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.5"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E12",
+      "passed": true,
+      "latency_ms": 3.085,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 2
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [
+            {
+              "column": "销售额",
+              "op": "gte",
+              "value": 100
+            }
+          ],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 2,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 2,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "100"
+          },
+          {
+            "日期": "2026-10-26",
+            "分类": "非抗生素",
+            "销售额": "999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E13",
+      "passed": true,
+      "latency_ms": 3.998,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 6
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [
+            {
+              "column": "销售额",
+              "op": "lt",
+              "value": 1
+            }
+          ],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 6,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 6,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.1"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.2"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.3"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.4"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.5"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E14",
+      "passed": true,
+      "latency_ms": 3.512,
+      "expected": {
+        "status": "ok",
+        "results": [
+          {
+            "笔数": 8
+          }
+        ]
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [
+            {
+              "column": "*",
+              "op": "count",
+              "alias": "笔数"
+            }
+          ],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 8,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 1,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "笔数": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": "E15",
+      "passed": true,
+      "latency_ms": 2.89,
+      "expected": {
+        "status": "ok",
+        "results": [
+          {
+            "总额": "1101.1"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [
+            {
+              "column": "销售额",
+              "op": "sum",
+              "alias": "总额"
+            }
+          ],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 8,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 1,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "总额": "1101.1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E16",
+      "passed": true,
+      "latency_ms": 2.654,
+      "expected": {
+        "status": "ok",
+        "results": [
+          {
+            "最低": "0.1"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [
+            {
+              "column": "销售额",
+              "op": "min",
+              "alias": "最低"
+            }
+          ],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 8,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 1,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "最低": "0.1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E17",
+      "passed": true,
+      "latency_ms": 2.821,
+      "expected": {
+        "status": "ok",
+        "results": [
+          {
+            "最高": "999"
+          }
+        ]
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [
+            {
+              "column": "销售额",
+              "op": "max",
+              "alias": "最高"
+            }
+          ],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 8,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 1,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "最高": "999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E18",
+      "passed": true,
+      "latency_ms": 2.727,
+      "expected": {
+        "status": "ok",
+        "results": [
+          {
+            "类别数": 2
+          }
+        ]
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [
+            {
+              "column": "分类",
+              "op": "distinct",
+              "alias": "类别数"
+            }
+          ],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 8,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 1,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "类别数": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "E19",
+      "passed": true,
+      "latency_ms": 3.589,
+      "expected": {
+        "status": "ok",
+        "total_result_rows": 2
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [
+            "分类"
+          ],
+          "metrics": [
+            {
+              "column": "*",
+              "op": "count",
+              "alias": "笔数"
+            }
+          ],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 8,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 2,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "分类": "抗生素",
+            "笔数": 4
+          },
+          {
+            "分类": "非抗生素",
+            "笔数": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "E20",
+      "passed": true,
+      "latency_ms": 3.331,
+      "expected": {
+        "status": "ok",
+        "total_result_rows": 8,
+        "next_offset": 7
+      },
+      "actual": {
+        "status": "ok",
+        "source": "sales.csv",
+        "query": {
+          "sheet": null,
+          "filters": [],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 8,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 8,
+        "offset": 5,
+        "next_offset": 7,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "100"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E21",
+      "passed": true,
+      "latency_ms": 29.118,
+      "expected": {
+        "status": "ok",
+        "sheets": [
+          {
+            "sheet": "销售",
+            "rows": 8
+          },
+          {
+            "sheet": "说明",
+            "rows": 1
+          }
+        ]
+      },
+      "actual": {
+        "status": "ok",
+        "source": "multi.xlsx",
+        "sheets": [
+          {
+            "sheet": "销售",
+            "rows": 8,
+            "columns": [
+              "日期",
+              "分类",
+              "销售额"
+            ],
+            "missing": {
+              "日期": 0,
+              "分类": 0,
+              "销售额": 0
+            },
+            "sample": [
+              {
+                "日期": "2026-10-19",
+                "分类": "抗生素",
+                "销售额": "0.1"
+              },
+              {
+                "日期": "2026-10-19",
+                "分类": "非抗生素",
+                "销售额": "0.2"
+              },
+              {
+                "日期": "2026-10-19",
+                "分类": "抗生素",
+                "销售额": "0.3"
+              }
+            ]
+          },
+          {
+            "sheet": "说明",
+            "rows": 1,
+            "columns": [
+              "日期",
+              "分类",
+              "销售额"
+            ],
+            "missing": {
+              "日期": 0,
+              "分类": 0,
+              "销售额": 0
+            },
+            "sample": [
+              {
+                "日期": "2026-10-19",
+                "分类": "抗生素",
+                "销售额": "0.1"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "E22",
+      "passed": true,
+      "latency_ms": 7.753,
+      "expected": {
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "error": "存在多个工作表，请先 inspect_table 并指定 sheet",
+        "source": "multi.xlsx"
+      }
+    },
+    {
+      "id": "E23",
+      "passed": true,
+      "latency_ms": 6.771,
+      "expected": {
+        "status": "ok",
+        "matched_rows": 8
+      },
+      "actual": {
+        "status": "ok",
+        "source": "multi.xlsx",
+        "query": {
+          "sheet": "销售",
+          "filters": [],
+          "group_by": [],
+          "metrics": [],
+          "date_column": null,
+          "start_date": null,
+          "end_date": null
+        },
+        "total_rows": 8,
+        "matched_rows": 8,
+        "date_coverage": null,
+        "warnings": [],
+        "total_result_rows": 8,
+        "offset": 0,
+        "next_offset": null,
+        "results": [
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.1"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.2"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.3"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.4"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "0.5"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "非抗生素",
+            "销售额": "0.6"
+          },
+          {
+            "日期": "2026-10-19",
+            "分类": "抗生素",
+            "销售额": "100"
+          },
+          {
+            "日期": "2026-10-26",
+            "分类": "非抗生素",
+            "销售额": "999"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E24",
+      "passed": true,
+      "latency_ms": 2.85,
+      "expected": {
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "error": "列不存在：不存在；可用列：['日期', '分类', '销售额']",
+        "source": "sales.csv"
+      }
+    },
+    {
+      "id": "E25",
+      "passed": true,
+      "latency_ms": 2.694,
+      "expected": {
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "error": "不支持的筛选操作：eval",
+        "source": "sales.csv"
+      }
+    },
+    {
+      "id": "E26",
+      "passed": true,
+      "latency_ms": 2.64,
+      "expected": {
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "error": "日期筛选需要 date_column",
+        "source": "sales.csv"
+      }
+    },
+    {
+      "id": "E27",
+      "passed": true,
+      "latency_ms": 2.779,
+      "expected": {
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "error": "开始日期不能晚于结束日期",
+        "source": "sales.csv"
+      }
+    },
+    {
+      "id": "E28",
+      "passed": true,
+      "latency_ms": 0.271,
+      "expected": {
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "source": "../outside.txt",
+        "error": "文件名必须是当前会话内的相对路径"
+      }
+    },
+    {
+      "id": "E29",
+      "passed": true,
+      "latency_ms": 3.617,
+      "expected": {
+        "status": "ok",
+        "content": "ABC",
+        "next_offset": 3
+      },
+      "actual": {
+        "status": "ok",
+        "source": "brief.txt",
+        "total_characters": 6,
+        "offset": 0,
+        "next_offset": 3,
+        "content": "ABC"
+      }
+    },
+    {
+      "id": "E30",
+      "passed": true,
+      "latency_ms": 4.47,
+      "expected": {
+        "status": "error"
+      },
+      "actual": {
+        "status": "error",
+        "error": "发现非数字值：未知；未将其按 0 计算",
+        "source": "bad.csv"
+      }
+    }
+  ]
+}
